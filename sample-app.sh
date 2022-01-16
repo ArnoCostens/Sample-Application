@@ -1,15 +1,16 @@
 #!/bin/bash
 set -euo pipefail
 
-mkdir tempdir
-mkdir tempdir/templates
-mkdir tempdir/static
+#mkdir tempdir
+#mkdir tempdir/templates
+#mkdir tempdir/static
 
-cp sample_app.py tempdir/.
-cp -r templates/* tempdir/templates/.
-cp -r static/* tempdir/static/.
+#cp sample_app.py tempdir/.
+#cp -r templates/* tempdir/templates/.
+#cp -r static/* tempdir/static/.
 
-cat > tempdir/Dockerfile << _EOF_
+#cat > tempdir/Dockerfile << _EOF_
+cat > Dockerfile << _EOF_
 FROM python
 RUN pip install flask
 COPY  ./static /home/myapp/static/
